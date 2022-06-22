@@ -1,5 +1,5 @@
 {% set name = "exchange-calendars" %}
-{% set version = "3.6.3" %}
+{% set version = "4.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/exchange_calendars-{{ version }}.tar.gz
-  sha256: 99d151031a08397668d2707806566fdc7b3ae874e81ff13f876caed2f2a1731d
+  sha256: c75836120a2279e18dd89573c25b5bc05c953d696ffb988baeed014202f5810e
 
 build:
   entry_points:
