@@ -14,16 +14,17 @@ build:
     - ecal = exchange_calendars.ecal:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
     - python >=3.7
+    - setuptools_scm >=6.2
   run:
     - korean_lunar_calendar
     - numpy
-    - pandas >=1.1
+    - pandas >=1.1,<2
     - pyluach
     - python >=3.7
     - python-dateutil
