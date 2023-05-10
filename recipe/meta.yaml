@@ -1,5 +1,5 @@
 {% set name = "exchange-calendars" %}
-{% set version = "4.2.6" %}
+{% set version = "4.2.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/exchange_calendars-{{ version }}.tar.gz
-  sha256: acb258eae1dca0b63e0275e68d5f0718e388d569a8d24065ecb2c76d9d08099b
+  sha256: fec2926595abd4fdeb10fe2c091f0ff8ad7309381efad34725f342eac10f1203
 
 build:
   entry_points:
     - ecal = exchange_calendars.ecal:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
