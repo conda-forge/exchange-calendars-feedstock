@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/exchange_calendars-{{ version }}.tar.gz
-  sha256: acb258eae1dca0b63e0275e68d5f0718e388d569a8d24065ecb2c76d9d08099b
+  sha256: 1598b6219a58e7be218c640f389375e39c9c12513c7db82d7591ae56f64467f9
 
 build:
   entry_points:
