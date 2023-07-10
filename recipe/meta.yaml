@@ -44,7 +44,7 @@ about:
   home: https://github.com/gerrymanoim/exchange_calendars
   summary: exchange_calendars is a Python library with securities exchange calendars
   license: Apache-2.0
-  license_file: LICENSE.txt
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
