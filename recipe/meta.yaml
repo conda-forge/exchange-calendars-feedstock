@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/exchange_calendars-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/exchange_calendars-{{ version }}.tar.gz
   sha256: 03e451302250be94b902e108349e01ba3c608b08e4e1e7a661332d06af2086f5
 
 build:
@@ -14,19 +14,19 @@ build:
     - ecal = exchange_calendars.ecal:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools_scm >=6.2
   run:
     - korean_lunar_calendar
     - numpy
     - pandas >=1.1
     - pyluach
-    - python >=3.8
+    - python >={{ python_min }}
     - python-dateutil
     - pytz
     - toolz
@@ -39,6 +39,7 @@ test:
     - ecal XNYS 2020
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/gerrymanoim/exchange_calendars
